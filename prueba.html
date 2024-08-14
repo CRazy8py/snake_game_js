@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otra Página</title>
+</head>
+<body>
+
+<h1>Bienvenido</h1>
+
+<script>
+    // Obtén los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const nombreUsuario = urlParams.get('nombre');
+    const idUsuario = urlParams.get('id');
+
+    // Muestra la información en la página
+    document.write("<p>Nombre de Usuario: " + nombreUsuario + "</p>");
+    document.write("<p>ID de Usuario: " + idUsuario + "</p>");
+</script>
+
+</body>
+</html>

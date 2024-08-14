@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(
+                140deg,
+                rgba(2, 0, 36, 1) 0%,
+                rgba(9, 9, 121, 1) 35%,
+                rgba(5, 100, 181, 1) 64%,
+                rgba(0, 212, 255, 1) 100%
+            );
+        }
+        .cajafuera{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            overflow: hidden;
+            background: rgb(2,0,36);
+            background: linear-gradient(
+                140deg,
+                rgba(2, 0, 36, 1) 0%,
+                rgba(9, 9, 121, 1) 35%,
+                rgba(5, 100, 181, 1) 64%,
+                rgba(0, 212, 255, 1) 100%
+            );
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .comment-container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            height: auto;
+            position: relative;
+            color: black;
+            border: 0.1em solid black;
+            text-align: center;
+        }
+        .comment-container img {
+        width: 50%;
+        max-width: 200px;
+        display: block;
+        margin: 0 auto 16px;
+        border-radius: 8px;
+    }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            width: 80%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+            border: 0;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 16px;
+            color: white;
+            background-color: #6D26D3;
+            text-align: center;
+            margin: 5%;
+            font-weight: bold;
+            text-decoration: none; /* Añadido para quitar la subrayado del enlace */
+            display: inline-block; /* Añadido para que se comporte como un bloque en línea */
+        }
+
+        .button:hover {
+            background-color: #45a049;
+            
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+        form {
+            text-align: center; /* Centrar el contenido del formulario */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Deja tu Comentario</h1>
+    </header>
+    <a href="catalogo.php" class="back-button">&#8592; Volver</a>
+    <div class="comment-container">
+        <img src="snake.jpeg" alt="snake" class="comment-container img">
+        <form action="comment.php" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="comment">Comentario:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+    
+            <button type="submit" class="button">Enviar Comentario</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
